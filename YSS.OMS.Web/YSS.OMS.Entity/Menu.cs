@@ -21,6 +21,7 @@ namespace YSS.OMS.Entity
         public string Tooltip { get; set; }
         public string Link { get; set; }
         public int Order { get; set; }
+        public bool Enable { get; set; }
         public short MenuType { get; set; }
         public string Icon { get; set; }
         public string Remark { get; set; }

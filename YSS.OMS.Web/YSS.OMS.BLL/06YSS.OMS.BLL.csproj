@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,21 +43,35 @@
   <ItemGroup>
     <Compile Include="Common\BaseBLL.cs" />
     <Compile Include="Common\UnitOfWorkFactory.cs" />
+    <Compile Include="FrameworkBLL\MenuBLL.cs" />
+    <Compile Include="FrameworkBLL\SystemLogBLL.cs" />
+    <Compile Include="FrameworkBLL\UserLoginBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionData\SessionDataBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BusinessBLL\" />
-    <Folder Include="FrameworkBLL\" />
-    <Folder Include="SessionData\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\YSS.OMS.Common\01YSS.OMS.Common.csproj">
+      <Project>{63c45dc4-1c3e-4c78-9fcb-f166e11d7ac1}</Project>
+      <Name>01YSS.OMS.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\YSS.OMS.DAL\04YSS.OMS.DAL.csproj">
       <Project>{48bda6e4-063d-46e8-914c-1e72d22fc53f}</Project>
       <Name>04YSS.OMS.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\YSS.OMS.Entity\02YSS.OMS.Entity.csproj">
+      <Project>{ca04dd0f-03bf-4faa-a294-6d00bbaec5d0}</Project>
+      <Name>02YSS.OMS.Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\YSS.OMS.IDAL\03YSS.OMS.IDAL.csproj">
       <Project>{18341266-fa29-46d3-976e-c847e00e2180}</Project>
       <Name>03YSS.OMS.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YSS.OMS.Model\05YSS.OMS.Model.csproj">
+      <Project>{07f4e59e-2230-4f94-82e2-ecab73e83304}</Project>
+      <Name>05YSS.OMS.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

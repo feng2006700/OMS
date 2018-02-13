@@ -3,30 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using YSS.OMS.Common;
 
 namespace YSS.OMS.Web.Controllers
 {
-    public class HomeController : Controller
+    [HandlerLogin]
+    public class HomeController : ControllerBase
     {
-        public ActionResult Index()
+        public override ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
-            return View();
+            var model = Operator.GetOperator() != null ? Operator.GetOperator() : new CurrentOperator();
+            return View(model);
         }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your app description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+        
     }
 }
