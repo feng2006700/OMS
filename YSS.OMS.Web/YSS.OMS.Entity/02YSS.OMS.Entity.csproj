@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA04DD0F-03BF-4FAA-A294-6D00BBAEC5D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YSS.OMS.Entity</RootNamespace>
+    <AssemblyName>YSS.OMS.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessEntity\Customer.cs" />
+    <Compile Include="BusinessEntity\Order.cs" />
+    <Compile Include="BusinessEntity\OrderItem.cs" />
+    <Compile Include="BusinessEntity\Product.cs" />
+    <Compile Include="BusinessEntity\ProductPrice.cs" />
+    <Compile Include="BusinessEntity\ProductPriceItem.cs" />
+    <Compile Include="BusinessEntity\Purchase.cs" />
+    <Compile Include="BusinessEntity\PurchaseItem.cs" />
+    <Compile Include="Customer.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessEntity\Gathering.cs" />
+    <Compile Include="FrameworkEntity\Menu.cs" />
+    <Compile Include="FrameworkEntity\Role.cs" />
+    <Compile Include="FrameworkEntity\RoleAuthorize.cs" />
+    <Compile Include="FrameworkEntity\SystemLog.cs" />
+    <Compile Include="FrameworkEntity\ToDo.cs" />
+    <Compile Include="FrameworkEntity\User.cs" />
+    <Compile Include="FrameworkEntity\UserRole.cs" />
+    <Compile Include="Gathering.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OMSEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OMSEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OMSEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OMSEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OMSEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderItem.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPrice.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPriceItem.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseItem.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleAuthorize.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemLog.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToDo.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRole.cs">
+      <DependentUpon>OMSEntities.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="OMSEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OMSEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="OMSEntities.edmx.diagram">
+      <DependentUpon>OMSEntities.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OMSEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>OMSEntities.Context.cs</LastGenOutput>
+      <DependentUpon>OMSEntities.edmx</DependentUpon>
+    </Content>
+    <Content Include="OMSEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OMSEntities.edmx</DependentUpon>
+      <LastGenOutput>OMSEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YSS.OMS.Common\01YSS.OMS.Common.csproj">
+      <Project>{63c45dc4-1c3e-4c78-9fcb-f166e11d7ac1}</Project>
+      <Name>01YSS.OMS.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

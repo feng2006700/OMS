@@ -1,0 +1,23 @@
+﻿body {
+}
+
+.tbody {
+    margin: 0;
+    padding: 10px 10px; 
+}
+
+.tbody tr {
+    border: thin;
+    margin-top: 10px
+}
+
+.tbody th {
+    border: thin;
+    text-align: right;
+    margin-left: 10px;
+}
+
+.tbody td {
+    border: thin;
+    margin-left: 10px;
+}

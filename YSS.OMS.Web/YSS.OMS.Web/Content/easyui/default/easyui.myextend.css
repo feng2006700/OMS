@@ -1,0 +1,15 @@
+.searchbox-clearbutton {
+  width: 18px;
+  height: 20px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  background:url('../icons/clearjob.png') no-repeat center center;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+.searchbox-clearbutton-hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}

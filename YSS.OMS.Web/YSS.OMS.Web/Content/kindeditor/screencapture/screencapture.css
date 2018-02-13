@@ -1,0 +1,13 @@
+﻿/*文件列表框*/
+#CaptureMessage
+{
+    font-family: 新宋体;font-size: 12px; background-color: #FFFFFF; display:block; padding:5px;
+}
+#CaptureMessage .img{ float:left; border:0; background-image:url('uploading.gif'); height:10px; width:10px;}
+#CaptureMessage span{ float:left;}
+.ke-icon-screencapture {
+        background-image: url(screencapture.gif)!important;
+        background-position: 0px 0px;
+        width: 16px;
+        height: 16px;
+}

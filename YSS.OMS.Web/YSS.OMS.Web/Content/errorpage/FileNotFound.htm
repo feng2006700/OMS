@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>您访问的文件不存在</title>
+    <style type="text/css">
+        #content
+        {
+            width: 325px;
+            display: block;
+            position: absolute;
+            left: 50%;
+            margin-left: -162px;
+            padding-top: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div>
+            <img src="/Content/sites/images/Error/PageNotFound.jpg" alt="系统出错了" />
+        </div>
+        <div style="font-size: 13px; font-family: 宋体;">
+            <p>
+                我们非常抱歉，您要访问的文件<span id="fileName"></span>不存在，此页面可能已经删除、更名或暂时不可用，请稍后访问。
+            </p>
+            <p>
+                给您带来的不便深表歉意，感谢您对我们工作的支持。
+            </p>
+        </div>
+    </div>
+    <script language="JavaScript" type="text/JavaScript">
+    <!--
+        //获取参数
+        function getUrlParam(name) {
+            nk = "";
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return nk;
+        }
+        var fileName = getUrlParam("aspxerrorpath");
+        if (fileName != "")
+            document.getElementById("fileName").innerHTML = fileName;
+
+        function doInit(win) {
+        }
+    -->
+    </script>
+</body>
+</html>

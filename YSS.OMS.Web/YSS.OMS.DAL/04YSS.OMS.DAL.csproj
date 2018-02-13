@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48BDA6E4-063D-46E8-914C-1E72D22FC53F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YSS.OMS.DAL</RootNamespace>
+    <AssemblyName>YSS.OMS.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended">
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.121\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrameworkRepository\MenuRepository.cs" />
+    <Compile Include="FrameworkRepository\RoleRepository.cs" />
+    <Compile Include="BusinessRepository\CustomerRepository.cs" />
+    <Compile Include="RepositoryBase\EFRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryBase\EFUnitOfWork.cs" />
+    <Compile Include="FrameworkRepository\RoleAuthorizeRepository.cs" />
+    <Compile Include="FrameworkRepository\SystemLogRepository.cs" />
+    <Compile Include="FrameworkRepository\ToDoRepository.cs" />
+    <Compile Include="FrameworkRepository\UserRepository.cs" />
+    <Compile Include="FrameworkRepository\UserRoleRepository.cs" />
+    <Compile Include="BusinessRepository\GatheringRepository.cs" />
+    <Compile Include="BusinessRepository\OrderRepository.cs" />
+    <Compile Include="BusinessRepository\OrderItemRepository.cs" />
+    <Compile Include="BusinessRepository\ProductRepository.cs" />
+    <Compile Include="BusinessRepository\ProductPriceRepository.cs" />
+    <Compile Include="BusinessRepository\ProductPriceItemRepository.cs" />
+    <Compile Include="BusinessRepository\PurchaseRepository.cs" />
+    <Compile Include="BusinessRepository\PurchaseItemRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YSS.OMS.Common\01YSS.OMS.Common.csproj">
+      <Project>{63c45dc4-1c3e-4c78-9fcb-f166e11d7ac1}</Project>
+      <Name>01YSS.OMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YSS.OMS.Entity\02YSS.OMS.Entity.csproj">
+      <Project>{ca04dd0f-03bf-4faa-a294-6d00bbaec5d0}</Project>
+      <Name>02YSS.OMS.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YSS.OMS.IDAL\03YSS.OMS.IDAL.csproj">
+      <Project>{18341266-fa29-46d3-976e-c847e00e2180}</Project>
+      <Name>03YSS.OMS.IDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
